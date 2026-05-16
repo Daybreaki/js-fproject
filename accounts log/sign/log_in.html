@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Log In - Bookend</title>
+  <link rel="stylesheet" href="../../landing.css">
+  <link rel="stylesheet" href="log_in.css">
+</head>
+<body>
+  <nav>
+    <div class="logo" onclick="goHome()">📚 Bookend</div>
+    <div class="nav-center">
+      <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Search books by title, author..." />
+        <button onclick="searchBooks()">🔍</button>
+      </div>
+    </div>
+    <div class="nav-auth">
+      <button class="btn-login" onclick="openLogin()">Log In</button>
+      <button class="btn-register" onclick="openRegister()">Register</button>
+      <div class="genre-dropdown">
+        <button class="genre-btn" onclick="toggleGenreMenu()">📖 Genres</button>
+        <div class="genre-menu" id="genreMenu">
+          <a href="../../catalogue/catalogue.html?genre=fiction">Fiction</a>
+          <a href="../../catalogue/catalogue.html?genre=mystery">Mystery & Thriller</a>
+          <a href="../../catalogue/catalogue.html?genre=scifi">Science Fiction</a>
+          <a href="../../catalogue/catalogue.html?genre=fantasy">Fantasy</a>
+          <a href="../../catalogue/catalogue.html?genre=romance">Romance</a>
+          <a href="../../catalogue/catalogue.html?genre=nonfiction">Non-Fiction</a>
+          <a href="../../catalogue/catalogue.html?genre=biography">Biography</a>
+          <a href="../../catalogue/catalogue.html?genre=history">History</a>
+          <a href="../../catalogue/catalogue.html?genre=selfhelp">Self-Help</a>
+          <a href="../../catalogue/catalogue.html?genre=children">Children's Books</a>
+          <a href="../../catalogue/catalogue.html?genre=horror">Horror</a>
+          <a href="../../catalogue/catalogue.html?genre=poetry">Poetry</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Login Form Section -->
+  <section class="auth-container">
+    <div class="auth-card">
+      <h1>Welcome Back</h1>
+      <p class="auth-subtitle">Log in to access your account and discover your next read</p>
+      
+      <form id="loginForm" onsubmit="handleLogin(event)">
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="Your Email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" placeholder="••••••••" required>
+        </div>
+
+        <div class="form-remember">
+          <input type="checkbox" id="remember" name="remember">
+          <label for="remember">Remember me</label>
+        </div>
+
+        <button type="submit" class="btn-submit">Log In</button>
+      </form>
+
+      <div class="auth-divider">or</div>
+
+      <button class="btn-social">
+        <span>🔵</span> Continue with Google
+      </button>
+
+      <div class="auth-footer">
+        <p>Don't have an account? <a href="register.html">Sign up here</a></p>
+        <p><a href="#" class="forgot-password">Forgot your password?</a></p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Bookend. All rights reserved.</p>
+  </footer>
+
+  <script src="../../landing.js"></script>
+  <script src="../../theme.js"></script>
+  <script src="log_in.js"></script>
+</body>
+</html>

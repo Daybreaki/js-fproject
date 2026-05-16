@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bookend Catalogue</title>
+  <link rel="stylesheet" href="catalogue.css">
+
+</head>
+<body>
+  <nav>
+    <div class="logo" onclick="goHome()">📚 Bookend</div>
+
+    <div class="nav-center">
+      <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Search books, authors, or genres..." />
+        <button onclick="searchCatalogue()">🔍</button>
+      </div>
+    </div>
+
+    <div class="nav-auth">
+      <div id="navAuth"></div>
+      <div class="auth-dropdown">
+        <button class="auth-toggle" onclick="toggleAuthMenu()">👤</button>
+        <div class="auth-menu" id="authMenu">
+          <button type="button" onclick="openLogin()">Log In</button>
+          <button type="button" onclick="openRegister()">Register</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="genre-dropdown">
+      <button class="genre-btn" onclick="toggleGenreMenu()">📖 Genres</button>
+      <div class="genre-menu" id="genreMenu">
+        <a href="catalogue.html?genre=fiction" onclick="selectGenreFromDropdown('Fiction'); return false;">Fiction</a>
+        <a href="catalogue.html?genre=mystery" onclick="selectGenreFromDropdown('Mystery & Thriller'); return false;">Mystery & Thriller</a>
+        <a href="catalogue.html?genre=scifi" onclick="selectGenreFromDropdown('Science Fiction'); return false;">Science Fiction</a>
+        <a href="catalogue.html?genre=fantasy" onclick="selectGenreFromDropdown('Fantasy'); return false;">Fantasy</a>
+        <a href="catalogue.html?genre=romance" onclick="selectGenreFromDropdown('Romance'); return false;">Romance</a>
+        <a href="catalogue.html?genre=nonfiction" onclick="selectGenreFromDropdown('Non-Fiction'); return false;">Non-Fiction</a>
+        <a href="catalogue.html?genre=biography" onclick="selectGenreFromDropdown('Biography'); return false;">Biography</a>
+        <a href="catalogue.html?genre=history" onclick="selectGenreFromDropdown('History'); return false;">History</a>
+        <a href="catalogue.html?genre=selfhelp" onclick="selectGenreFromDropdown('Self-Help'); return false;">Self-Help</a>
+        <a href="catalogue.html?genre=children" onclick="selectGenreFromDropdown('Children\'s Books'); return false;">Children's Books</a>
+        <a href="catalogue.html?genre=horror" onclick="selectGenreFromDropdown('Horror'); return false;">Horror</a>
+        <a href="catalogue.html?genre=poetry" onclick="selectGenreFromDropdown('Poetry'); return false;">Poetry</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="page-wrapper">
+    <section class="filter-panel">
+      <div class="filter-label">Filter by genre</div>
+      <div class="filter-buttons" id="genreButtons"></div>
+      <div class="filter-actions" id="filterActions"></div>
+    </section>
+
+    <section class="section-block">
+      <div class="section-header">
+        <div>
+          <p class="eyebrow">New Releases</p>
+          <h1>Fresh arrivals for your bookshelf</h1>
+        </div>
+      </div>
+      <div class="book-row" id="newReleasesRow"></div>
+    </section>
+
+    <section class="section-block" id="exploreSection">
+      <div class="section-header">
+        <div>
+          <p class="eyebrow">Explore the catalogue</p>
+          <h2>Browse the full collection</h2>
+        </div>
+        <p class="section-copy">All books are sorted alphabetically until you select a genre.</p>
+      </div>
+      <div class="catalogue-grid" id="catalogueGrid"></div>
+    </section>
+
+    <section class="section-block hidden" id="genreRowsSection">
+      <div class="section-header">
+        <div>
+          <p class="eyebrow">Genre selection</p>
+          <h2>Books by selected genres</h2>
+        </div>
+        <p class="section-copy">Each selected genre has its own row for easier browsing.</p>
+      </div>
+      <div id="genreRows"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Bookend. Catalogue created for browsing and filtering. | <span onclick="signOut()" style="cursor: pointer; color: #667eea; text-decoration: underline;">Sign Out</span></p>
+  </footer>
+
+  <script src="../theme.js"></script>
+  <script src="catalogue.js"></script>
+</body>
+</html>

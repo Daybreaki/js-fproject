@@ -1,0 +1,47 @@
+Proyecto Final: Catálogo Web con Autenticación
+Módulo: JavaScript
+Duración: 1 Semana
+
+Descripción General
+El objetivo de este proyecto final es desarrollar una página web dinámica que funcione como un catálogo de productos. El sistema pondrá a prueba los conocimientos adquiridos en JavaScript, requiriendo la implementación de autenticación de usuarios, gestión de roles y persistencia de datos directamente en el navegador.
+
+Estructura del Sitio (Vistas Requeridas)
+Para tener mayor claridad sobre el alcance del sitio web, se deben incluir y maquetar las siguientes páginas:
+
+Inicio: Página principal o landing page del proyecto.
+
+Registro: Formulario para la creación de nuevas cuentas.
+
+Login (Inicio de Sesión): Pantalla de acceso al sistema.
+
+Página de Productos (Catálogo): Vista general donde se listen todos los productos disponibles.
+
+Página de Detalle de Producto: Vista individual para mostrar la información ampliada de un solo producto.
+
+Página de Editar Perfil: Interfaz para que los usuarios puedan actualizar su información personal.
+
+Panel de Administración (Gestión de Inventario): Interfaz exclusiva para que el administrador pueda ejecutar las acciones de agregar, editar y eliminar productos del catálogo.
+
+Requerimientos Técnicos
+Registro e Inicio de Sesión (Login): El sistema debe permitir el registro de nuevos usuarios y el acceso mediante credenciales.
+
+Validaciones y Seguridad: * Es obligatorio implementar validaciones estrictas en todos los formularios (registro, login, edición de perfil y panel de gestión) para asegurar la integridad de la información ingresada.
+
+Protección de Vistas: Se debe agregar una validación de seguridad que impida el acceso al Panel de Administración a cualquier usuario que no cuente con el rol de administrador.
+
+Persistencia de Datos: * Método Principal (Recomendado): Toda la información de usuarios y productos debe almacenarse y gestionarse utilizando el localStorage del navegador.
+
+Método Alternativo: Como segunda opción, los datos pueden ser estructurados y manipulados simulando una base de datos a través de archivos JSON.
+
+Sistema de Roles y Permisos
+El flujo de la aplicación dependerá del tipo de cuenta con el que se inicie sesión. Deben existir dos roles claramente definidos:
+
+Usuario Estándar: * Tiene acceso para visualizar el catálogo y el detalle individual de los productos.
+
+Cuenta con permisos restringidos para gestionar su perfil: únicamente puede modificar su propia información personal (los datos proporcionados durante el registro) desde su página de perfil.
+
+No puede acceder por ningún motivo al Panel de Administración.
+
+Usuario Administrador: * Tiene control total sobre el catálogo.
+
+Está habilitado para realizar operaciones de gestión completas sobre el inventario desde su panel: agregar, editar, ver y eliminar productos. 
